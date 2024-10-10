@@ -1,0 +1,563 @@
+--Made by : Goldendex Hub
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/lime"))()
+
+local w = Library:Window("creator")
+local w1 = Library:Window("Main")
+
+w:Button("TPR", function()
+   print("Printed")
+end)
+
+w:Button("Thakanai Boss", function()
+   print("Printed")
+end)
+
+w1:Toggle("บิน", function(v)
+loadstring(game:HttpGet('https://pastebin.com/raw/YSL3xKYU'))()
+   print(v)
+end)
+
+w1:Toggle("ทะลุ", function(v)
+local Workspace = game:GetService("Workspace")
+local CoreGui = game:GetService("CoreGui")
+local Players = game:GetService("Players")
+local Noclip = Instance.new("ScreenGui")
+local BG = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Toggle = Instance.new("TextButton")
+local StatusPF = Instance.new("TextLabel")
+local Status = Instance.new("TextLabel")
+local Credit = Instance.new("TextLabel")
+local Plr = Players.LocalPlayer
+local Clipon = false
+
+Noclip.Name = "Noclip"
+Noclip.Parent = game.CoreGui
+
+BG.Name = "BG"
+BG.Parent = Noclip
+BG.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+BG.BorderColor3 = Color3.new(0.0588235, 0.0588235, 0.0588235)
+BG.BorderSizePixel = 2
+BG.Position = UDim2.new(0.149479166, 0, 0.82087779, 0)
+BG.Size = UDim2.new(0, 210, 0, 127)
+BG.Active = true
+BG.Draggable = true
+
+Title.Name = "Title"
+Title.Parent = BG
+Title.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
+Title.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
+Title.BorderSizePixel = 2
+Title.Size = UDim2.new(0, 210, 0, 33)
+Title.Font = Enum.Font.Highway
+Title.Text = "Noclip"
+Title.TextColor3 = Color3.new(1, 1, 1)
+Title.FontSize = Enum.FontSize.Size32
+Title.TextSize = 30
+Title.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
+Title.TextStrokeTransparency = 0
+
+Toggle.Parent = BG
+Toggle.BackgroundColor3 = Color3.new(0.266667, 0.00392157, 0.627451)
+Toggle.BorderColor3 = Color3.new(0.180392, 0, 0.431373)
+Toggle.BorderSizePixel = 2
+Toggle.Position = UDim2.new(0.152380958, 0, 0.374192119, 0)
+Toggle.Size = UDim2.new(0, 146, 0, 36)
+Toggle.Font = Enum.Font.Highway
+Toggle.FontSize = Enum.FontSize.Size28
+Toggle.Text = "Toggle"
+Toggle.TextColor3 = Color3.new(1, 1, 1)
+Toggle.TextSize = 25
+Toggle.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
+Toggle.TextStrokeTransparency = 0
+
+StatusPF.Name = "StatusPF"
+StatusPF.Parent = BG
+StatusPF.BackgroundColor3 = Color3.new(1, 1, 1)
+StatusPF.BackgroundTransparency = 1
+StatusPF.Position = UDim2.new(0.314285725, 0, 0.708661377, 0)
+StatusPF.Size = UDim2.new(0, 56, 0, 20)
+StatusPF.Font = Enum.Font.Highway
+StatusPF.FontSize = Enum.FontSize.Size24
+StatusPF.Text = "Status:"
+StatusPF.TextColor3 = Color3.new(1, 1, 1)
+StatusPF.TextSize = 20
+StatusPF.TextStrokeColor3 = Color3.new(0.333333, 0.333333, 0.333333)
+StatusPF.TextStrokeTransparency = 0
+StatusPF.TextWrapped = true
+
+Status.Name = "Status"
+Status.Parent = BG
+Status.BackgroundColor3 = Color3.new(1, 1, 1)
+Status.BackgroundTransparency = 1
+Status.Position = UDim2.new(0.580952346, 0, 0.708661377, 0)
+Status.Size = UDim2.new(0, 56, 0, 20)
+Status.Font = Enum.Font.Highway
+Status.FontSize = Enum.FontSize.Size14
+Status.Text = "off"
+Status.TextColor3 = Color3.new(0.666667, 0, 0)
+Status.TextScaled = true
+Status.TextSize = 14
+Status.TextStrokeColor3 = Color3.new(0.180392, 0, 0.431373)
+Status.TextWrapped = true
+Status.TextXAlignment = Enum.TextXAlignment.Left
+
+Credit.Name = "Credit"
+Credit.Parent = BG
+Credit.BackgroundColor3 = Color3.new(1, 1, 1)
+Credit.BackgroundTransparency = 1
+Credit.Position = UDim2.new(0.195238099, 0, 0.866141737, 0)
+Credit.Size = UDim2.new(0, 128, 0, 17)
+Credit.Font = Enum.Font.SourceSans
+Credit.FontSize = Enum.FontSize.Size18
+Credit.Text = "Created by KingLuna"
+Credit.TextColor3 = Color3.new(1, 1, 1)
+Credit.TextSize = 16
+Credit.TextStrokeColor3 = Color3.new(0.196078, 0.196078, 0.196078)
+Credit.TextStrokeTransparency = 0
+Credit.TextWrapped = true
+
+Toggle.MouseButton1Click:connect(function()
+ if Status.Text == "off" then
+  Clipon = true
+  Status.Text = "on"
+  Status.TextColor3 = Color3.new(0,185,0)
+  Stepped = game:GetService("RunService").Stepped:Connect(function()
+   if not Clipon == false then
+    for a, b in pairs(Workspace:GetChildren()) do
+                if b.Name == Plr.Name then
+                for i, v in pairs(Workspace[Plr.Name]:GetChildren()) do
+                if v:IsA("BasePart") then
+                v.CanCollide = false
+                end end end end
+   else
+    Stepped:Disconnect()
+   end
+  end)
+ elseif Status.Text == "on" then
+  Clipon = false
+  Status.Text = "off"
+  Status.TextColor3 = Color3.new(170,0,0)
+ end
+end)
+   print(v)
+end)
+
+w1:Toggle("วิ่งเร็ว", function(v)
+-- Variables
+local speedValue = 16 -- Default speed value
+
+-- Create GUI
+local gui = Instance.new("ScreenGui")
+gui.Name = "Goldendex Hub"
+gui.Parent = game.Players.LocalPlayer.PlayerGui
+
+local frame = Instance.new("Frame")
+frame.Name = "SpeedFrame"
+frame.Size = UDim2.new(0, 200, 0, 100)
+frame.Position = UDim2.new(0, 10, 0, 10)
+frame.BackgroundColor3 = Color3.new(0, 0, 0)
+frame.BackgroundTransparency = 0.5
+frame.Parent = gui
+
+local speedLabel = Instance.new("TextLabel")
+speedLabel.Name = "SpeedLabel"
+speedLabel.Size = UDim2.new(0, 180, 0, 30)
+speedLabel.Position = UDim2.new(0, 10, 0, 10)
+speedLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+speedLabel.TextColor3 = Color3.new(1, 1, 1)
+speedLabel.TextSize = 18
+speedLabel.Text = "Speed: " .. speedValue
+speedLabel.Parent = frame
+
+local decreaseButton = Instance.new("TextButton")
+decreaseButton.Name = "DecreaseButton"
+decreaseButton.Size = UDim2.new(0, 50, 0, 30)
+decreaseButton.Position = UDim2.new(0, 10, 0, 50)
+decreaseButton.BackgroundColor3 = Color3.new(0, 1, 0)
+decreaseButton.TextColor3 = Color3.new(1, 1, 1)
+decreaseButton.TextSize = 14
+decreaseButton.Text = "-"
+decreaseButton.Parent = frame
+
+local increaseButton = Instance.new("TextButton")
+increaseButton.Name = "IncreaseButton"
+increaseButton.Size = UDim2.new(0, 50, 0, 30)
+increaseButton.Position = UDim2.new(0, 140, 0, 50)
+increaseButton.BackgroundColor3 = Color3.new(0, 1, 0)
+increaseButton.TextColor3 = Color3.new(1, 1, 1)
+increaseButton.TextSize = 14
+increaseButton.Text = "+"
+increaseButton.Parent = frame
+
+-- Functions
+local function updateSpeedLabel()
+    speedLabel.Text = "Speed: " .. speedValue
+end
+
+local function decreaseSpeed()
+    if speedValue > 1 then
+        speedValue = speedValue - 1
+        updateSpeedLabel()
+    end
+end
+
+local function increaseSpeed()
+    speedValue = speedValue + 1
+    updateSpeedLabel()
+end
+
+local function onDecreaseButtonClicked()
+    decreaseSpeed()
+end
+
+local function onIncreaseButtonClicked()
+    increaseSpeed()
+end
+
+-- Event connections
+decreaseButton.MouseButton1Click:Connect(onDecreaseButtonClicked)
+increaseButton.MouseButton1Click:Connect(onIncreaseButtonClicked)
+
+-- Main loop
+while true do
+    -- Modify the speed of the character (you need to replace this with the appropriate code for your specific game)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = speedValue
+    wait(0.1) -- Adjust the wait time as desired
+end
+   print(v)
+end)
+
+w1:Toggle("วาร์ปไปหาคน", function(v)
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Goldendex HUB", "DarkTheme")
+local Tab = Window:NewTab("Player")
+local Section = Tab:NewSection("Select Player!")
+Plr = {}
+for i,v in pairs(game:GetService("Players"):GetChildren()) do
+    table.insert(Plr,v.Name) 
+end
+local drop = Section:NewDropdown("Select Player!", "Click To Select", Plr, function(t)
+   PlayerTP = t
+end)
+Section:NewButton("Click To TP", "", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
+end)
+Section:NewToggle("Auto Tp", "", function(t)
+_G.TPPlayer = t
+while _G.TPPlayer do wait()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players[PlayerTP].Character.HumanoidRootPart.CFrame
+end
+end)
+
+Section:NewButton("Refresh Dropdown","Refresh Dropdown", function()
+  drop:Refresh(Plr)
+end)
+   print(v)
+end)
+
+w1:Toggle("มองคน mm2",function(v)
+--[[
+    Credits to Goldendex Hub for the Role getter <3
+        - poorly coded by Goldendex Hub
+]]
+
+-- > Declarations < --
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local LP = Players.LocalPlayer
+local roles
+
+-- > Functions <--
+
+function CreateHighlight() -- make any new highlights for new players
+	for i, v in pairs(Players:GetChildren()) do
+		if v ~= LP and v.Character and not v.Character:FindFirstChild("Highlight") then
+			Instance.new("Highlight", v.Character)           
+		end
+	end
+end
+
+function UpdateHighlights() -- Get Current Role Colors (messy)
+	for _, v in pairs(Players:GetChildren()) do
+		if v ~= LP and v.Character and v.Character:FindFirstChild("Highlight") then
+			Highlight = v.Character:FindFirstChild("Highlight")
+			if v.Name == Sheriff and IsAlive(v) then
+				Highlight.FillColor = Color3.fromRGB(0, 0, 225)
+			elseif v.Name == Murder and IsAlive(v) then
+				Highlight.FillColor = Color3.fromRGB(225, 0, 0)
+			elseif v.Name == Hero and IsAlive(v) and not IsAlive(game.Players[Sheriff]) then
+				Highlight.FillColor = Color3.fromRGB(255, 250, 0)
+			else
+				Highlight.FillColor = Color3.fromRGB(0, 225, 0)
+			end
+		end
+	end
+end	
+
+function IsAlive(Player) -- Simple sexy function
+	for i, v in pairs(roles) do
+		if Player.Name == i then
+			if not v.Killed and not v.Dead then
+				return true
+			else
+				return false
+			end
+		end
+	end
+end
+
+
+-- > Loops < --
+
+RunService.RenderStepped:connect(function()
+	roles = ReplicatedStorage:FindFirstChild("GetPlayerData", true):InvokeServer()
+	for i, v in pairs(roles) do
+		if v.Role == "Murderer" then
+			Murder = i
+		elseif v.Role == 'Sheriff'then
+			Sheriff = i
+		elseif v.Role == 'Hero'then
+			Hero = i
+		end
+	end
+	CreateHighlight()
+	UpdateHighlights()
+end)
+print(v)
+end)
+
+w1:Toggle("ชิปล็อค",function(v)
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ShiftlockStarterGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+
+--Properties:
+
+ShiftlockStarterGui.Name = "Shiftlock (StarterGui)"
+ShiftlockStarterGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ShiftlockStarterGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ShiftlockStarterGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageButton.BackgroundTransparency = 1.000
+ImageButton.Position = UDim2.new(0.921914339, 0, 0.552375436, 0)
+ImageButton.Size = UDim2.new(0.0636147112, 0, 0.0661305636, 0)
+ImageButton.SizeConstraint = Enum.SizeConstraint.RelativeXX
+ImageButton.Image = "http://www.roblox.com/asset/?id=182223762"
+
+-- Scripts:
+
+local function TLQOYN_fake_script() -- ImageButton.ShiftGUI 
+	local script = Instance.new('LocalScript', ImageButton)
+
+	local MobileCameraFramework = {}
+	local players = game:GetService("Players")
+	local runservice = game:GetService("RunService")
+	local CAS = game:GetService("ContextActionService")
+	local player = players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local root = character:WaitForChild("HumanoidRootPart")
+	local humanoid = character.Humanoid
+	local camera = workspace.CurrentCamera
+	local button = script.Parent
+	
+	--Visiblity
+	uis = game:GetService("UserInputService")
+	ismobile = uis.TouchEnabled
+	button.Visible = ismobile
+	
+	local states = {
+		OFF = "rbxasset://textures/ui/mouseLock_off@2x.png",
+		ON = "rbxasset://textures/ui/mouseLock_on@2x.png"
+	}
+	local MAX_LENGTH = 900000
+	local active = false
+	local ENABLED_OFFSET = CFrame.new(1.7, 0, 0)
+	local DISABLED_OFFSET = CFrame.new(-1.7, 0, 0)
+	local function UpdateImage(STATE)
+		button.Image = states[STATE]
+	end
+	local function UpdateAutoRotate(BOOL)
+		humanoid.AutoRotate = BOOL
+	end
+	local function GetUpdatedCameraCFrame(ROOT, CAMERA)
+		return CFrame.new(root.Position, Vector3.new(CAMERA.CFrame.LookVector.X * MAX_LENGTH, root.Position.Y, CAMERA.CFrame.LookVector.Z * MAX_LENGTH))
+	end
+	local function EnableShiftlock()
+		UpdateAutoRotate(false)
+		UpdateImage("ON")
+		root.CFrame = GetUpdatedCameraCFrame(root, camera)
+		camera.CFrame = camera.CFrame * ENABLED_OFFSET
+	end
+	local function DisableShiftlock()
+		UpdateAutoRotate(true)
+		UpdateImage("OFF")
+		camera.CFrame = camera.CFrame * DISABLED_OFFSET
+		pcall(function()
+			active:Disconnect()
+			active = nil
+		end)
+	end
+	UpdateImage("OFF")
+	active = false
+	function ShiftLock()
+		if not active then
+			active = runservice.RenderStepped:Connect(function()
+				EnableShiftlock()
+			end)
+		else
+			DisableShiftlock()
+		end
+	end
+	local ShiftLockButton = CAS:BindAction("ShiftLOCK", ShiftLock, false, "On")
+	CAS:SetPosition("ShiftLOCK", UDim2.new(0.8, 0, 0.8, 0))
+	button.MouseButton1Click:Connect(function()
+		if not active then
+			active = runservice.RenderStepped:Connect(function()
+				EnableShiftlock()
+			end)
+		else
+			DisableShiftlock()
+		end
+	end)
+	return MobileCameraFramework
+	
+end
+coroutine.wrap(TLQOYN_fake_script)()
+local function OMQRQRC_fake_script() -- ShiftlockStarterGui.LocalScript 
+	local script = Instance.new('LocalScript', ShiftlockStarterGui)
+
+	local Players = game:GetService("Players")
+	local UserInputService = game:GetService("UserInputService")
+	local Settings = UserSettings()
+	local GameSettings = Settings.GameSettings
+	local ShiftLockController = {}
+	while not Players.LocalPlayer do
+		wait()
+	end
+	local LocalPlayer = Players.LocalPlayer
+	local Mouse = LocalPlayer:GetMouse()
+	local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
+	local ScreenGui, ShiftLockIcon, InputCn
+	local IsShiftLockMode = true
+	local IsShiftLocked = true
+	local IsActionBound = false
+	local IsInFirstPerson = false
+	ShiftLockController.OnShiftLockToggled = Instance.new("BindableEvent")
+	local function isShiftLockMode()
+		return LocalPlayer.DevEnableMouseLock and GameSettings.ControlMode == Enum.ControlMode.MouseLockSwitch and LocalPlayer.DevComputerMovementMode ~= Enum.DevComputerMovementMode.ClickToMove and GameSettings.ComputerMovementMode ~= Enum.ComputerMovementMode.ClickToMove and LocalPlayer.DevComputerMovementMode ~= Enum.DevComputerMovementMode.Scriptable
+	end
+	if not UserInputService.TouchEnabled then
+		IsShiftLockMode = isShiftLockMode()
+	end
+	local function onShiftLockToggled()
+		IsShiftLocked = not IsShiftLocked
+		ShiftLockController.OnShiftLockToggled:Fire()
+	end
+	local initialize = function()
+		print("enabled")
+	end
+	function ShiftLockController:IsShiftLocked()
+		return IsShiftLockMode and IsShiftLocked
+	end
+	function ShiftLockController:SetIsInFirstPerson(isInFirstPerson)
+		IsInFirstPerson = isInFirstPerson
+	end
+	local function mouseLockSwitchFunc(actionName, inputState, inputObject)
+		if IsShiftLockMode then
+			onShiftLockToggled()
+		end
+	end
+	local function disableShiftLock()
+		if ScreenGui then
+			ScreenGui.Parent = nil
+		end
+		IsShiftLockMode = false
+		Mouse.Icon = ""
+		if InputCn then
+			InputCn:disconnect()
+			InputCn = nil
+		end
+		IsActionBound = false
+		ShiftLockController.OnShiftLockToggled:Fire()
+	end
+	local onShiftInputBegan = function(inputObject, isProcessed)
+		if isProcessed then
+			return
+		end
+		if inputObject.UserInputType ~= Enum.UserInputType.Keyboard or inputObject.KeyCode == Enum.KeyCode.LeftShift or inputObject.KeyCode == Enum.KeyCode.RightShift then
+		end
+	end
+	local function enableShiftLock()
+		IsShiftLockMode = isShiftLockMode()
+		if IsShiftLockMode then
+			if ScreenGui then
+				ScreenGui.Parent = PlayerGui
+			end
+			if IsShiftLocked then
+				ShiftLockController.OnShiftLockToggled:Fire()
+			end
+			if not IsActionBound then
+				InputCn = UserInputService.InputBegan:connect(onShiftInputBegan)
+				IsActionBound = true
+			end
+		end
+	end
+	GameSettings.Changed:connect(function(property)
+		if property == "ControlMode" then
+			if GameSettings.ControlMode == Enum.ControlMode.MouseLockSwitch then
+				enableShiftLock()
+			else
+				disableShiftLock()
+			end
+		elseif property == "ComputerMovementMode" then
+			if GameSettings.ComputerMovementMode == Enum.ComputerMovementMode.ClickToMove then
+				disableShiftLock()
+			else
+				enableShiftLock()
+			end
+		end
+	end)
+	LocalPlayer.Changed:connect(function(property)
+		if property == "DevEnableMouseLock" then
+			if LocalPlayer.DevEnableMouseLock then
+				enableShiftLock()
+			else
+				disableShiftLock()
+			end
+		elseif property == "DevComputerMovementMode" then
+			if LocalPlayer.DevComputerMovementMode == Enum.DevComputerMovementMode.ClickToMove or LocalPlayer.DevComputerMovementMode == Enum.DevComputerMovementMode.Scriptable then
+				disableShiftLock()
+			else
+				enableShiftLock()
+			end
+		end
+	end)
+	LocalPlayer.CharacterAdded:connect(function(character)
+		if not UserInputService.TouchEnabled then
+			initialize()
+		end
+	end)
+	if not UserInputService.TouchEnabled then
+		initialize()
+		if isShiftLockMode() then
+			InputCn = UserInputService.InputBegan:connect(onShiftInputBegan)
+			IsActionBound = true
+		end
+	end
+	enableShiftLock()
+	return ShiftLockController
+	
+end
+coroutine.wrap(OMQRQRC_fake_script)()
+print(v)
+end)
