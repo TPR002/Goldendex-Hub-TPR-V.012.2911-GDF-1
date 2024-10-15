@@ -1,0 +1,647 @@
+-- Instances:
+
+local GoldendexLauncher = {
+	GoldendexLauncher = Instance.new("ScreenGui"),
+	Frame = Instance.new("Frame"),
+	StatusSection = Instance.new("Frame"),
+	SectionTopBar = Instance.new("Folder"),
+	Frame_2 = Instance.new("Frame"),
+	UICorner = Instance.new("UICorner"),
+	Frame_3 = Instance.new("Frame"),
+	TextLabel = Instance.new("TextLabel"),
+	UICorner_2 = Instance.new("UICorner"),
+	ContentFrame = Instance.new("Frame"),
+	GoldendexHubStatusFrame = Instance.new("Frame"),
+	Status = Instance.new("TextLabel"),
+	StatusName = Instance.new("TextLabel"),
+	GoldendexAPIStatusFrame = Instance.new("Frame"),
+	Status_2 = Instance.new("TextLabel"),
+	StatusName_2 = Instance.new("TextLabel"),
+	GoldendexLauncherStatusFrame = Instance.new("Frame"),
+	Status_3 = Instance.new("TextLabel"),
+	StatusName_3 = Instance.new("TextLabel"),
+	UIListLayout = Instance.new("UIListLayout"),
+	UICorner_3 = Instance.new("UICorner"),
+	UIListLayout_2 = Instance.new("UIListLayout"),
+	UIPadding = Instance.new("UIPadding"),
+	NewsSection = Instance.new("Frame"),
+	SectionTopBar_2 = Instance.new("Folder"),
+	Frame_4 = Instance.new("Frame"),
+	UICorner_4 = Instance.new("UICorner"),
+	Frame_5 = Instance.new("Frame"),
+	TextLabel_2 = Instance.new("TextLabel"),
+	UICorner_5 = Instance.new("UICorner"),
+	ContentFrame_2 = Instance.new("ScrollingFrame"),
+	UIListLayout_3 = Instance.new("UIListLayout"),
+	LaunchSection = Instance.new("Frame"),
+	SectionTopBar_3 = Instance.new("Folder"),
+	Frame_6 = Instance.new("Frame"),
+	UICorner_6 = Instance.new("UICorner"),
+	Frame_7 = Instance.new("Frame"),
+	TextLabel_3 = Instance.new("TextLabel"),
+	UICorner_7 = Instance.new("UICorner"),
+	ContentFrame_3 = Instance.new("Frame"),
+	ThemeSelectionFrame = Instance.new("Frame"),
+	UICorner_8 = Instance.new("UICorner"),
+	SelectionLeft = Instance.new("TextButton"),
+	SelectionRight = Instance.new("TextButton"),
+	SelectedLabel = Instance.new("TextLabel"),
+	Launch = Instance.new("TextButton"),
+	UICorner_9 = Instance.new("UICorner"),
+	Containers = Instance.new("Folder"),
+	NewsDivider = Instance.new("Frame"),
+	UICorner_10 = Instance.new("UICorner"),
+	NewsLabel = Instance.new("TextLabel"),
+	UIPadding_2 = Instance.new("UIPadding"),
+}
+
+--Properties:
+
+GoldendexLauncher.GoldendexLauncher.Name = "GoldendexLauncher"
+GoldendexLauncher.GoldendexLauncher.Parent = game.CoreGui
+GoldendexLauncher.GoldendexLauncher.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+GoldendexLauncher.Frame.Parent = GoldendexLauncher.GoldendexLauncher
+GoldendexLauncher.Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+GoldendexLauncher.Frame.BackgroundColor3 = Color3.fromRGB(41, 53, 68)
+GoldendexLauncher.Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+GoldendexLauncher.Frame.Size = UDim2.new(0, 350, 0, 400)
+
+GoldendexLauncher.StatusSection.Name = "StatusSection"
+GoldendexLauncher.StatusSection.Parent = GoldendexLauncher.Frame
+GoldendexLauncher.StatusSection.AnchorPoint = Vector2.new(0.5, 0)
+GoldendexLauncher.StatusSection.BackgroundColor3 = Color3.fromRGB(35, 47, 62)
+GoldendexLauncher.StatusSection.BorderSizePixel = 0
+GoldendexLauncher.StatusSection.Size = UDim2.new(1, -20, 0, 100)
+
+GoldendexLauncher.SectionTopBar.Name = "SectionTopBar"
+GoldendexLauncher.SectionTopBar.Parent = GoldendexLauncher.StatusSection
+
+GoldendexLauncher.Frame_2.Parent = GoldendexLauncher.SectionTopBar
+GoldendexLauncher.Frame_2.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
+GoldendexLauncher.Frame_2.Size = UDim2.new(0, 2, 0, 32)
+
+GoldendexLauncher.UICorner.Parent = GoldendexLauncher.Frame_2
+
+GoldendexLauncher.Frame_3.Parent = GoldendexLauncher.SectionTopBar
+GoldendexLauncher.Frame_3.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
+GoldendexLauncher.Frame_3.BackgroundTransparency = 0.750
+GoldendexLauncher.Frame_3.BorderSizePixel = 0
+GoldendexLauncher.Frame_3.Position = UDim2.new(0, 0, 0, 32)
+GoldendexLauncher.Frame_3.Size = UDim2.new(1, 0, 0, 1)
+
+GoldendexLauncher.TextLabel.Parent = GoldendexLauncher.SectionTopBar
+GoldendexLauncher.TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.TextLabel.BackgroundTransparency = 1.000
+GoldendexLauncher.TextLabel.Position = UDim2.new(0, 12, 0, 4)
+GoldendexLauncher.TextLabel.Size = UDim2.new(0, 299, 0, 24)
+GoldendexLauncher.TextLabel.Font = Enum.Font.SourceSans
+GoldendexLauncher.TextLabel.Text = "Server Status"
+
+GoldendexLauncher.TextLabel.TextColor3 = Color3.fromRGB(211, 216, 226)
+GoldendexLauncher.TextLabel.TextSize = 14.000
+GoldendexLauncher.TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+GoldendexLauncher.UICorner_2.CornerRadius = UDim.new(0, 4)
+GoldendexLauncher.UICorner_2.Parent = GoldendexLauncher.StatusSection
+
+GoldendexLauncher.ContentFrame.Name = "ContentFrame"
+GoldendexLauncher.ContentFrame.Parent = GoldendexLauncher.StatusSection
+GoldendexLauncher.ContentFrame.AnchorPoint = Vector2.new(0.5, 1)
+GoldendexLauncher.ContentFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.ContentFrame.BackgroundTransparency = 1.000
+GoldendexLauncher.ContentFrame.Position = UDim2.new(0.5, 0, 1, -2)
+GoldendexLauncher.ContentFrame.Size = UDim2.new(1, -20, 0, 60)
+
+GoldendexLauncher.GoldendexHubStatusFrame.Name = "GoldendexHubStatusFrame"
+GoldendexLauncher.GoldendexHubStatusFrame.Parent = GoldendexLauncher.ContentFrame
+GoldendexLauncher.GoldendexHubStatusFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.GoldendexHubStatusFrame.BackgroundTransparency = 1.000
+GoldendexLauncher.GoldendexHubStatusFrame.LayoutOrder = 2
+GoldendexLauncher.GoldendexHubStatusFrame.Position = UDim2.new(0, 10, 0, 38)
+GoldendexLauncher.GoldendexHubStatusFrame.Size = UDim2.new(0, 60, 0, 60)
+
+GoldendexLauncher.Status.Name = "Status"
+GoldendexLauncher.Status.Parent = GoldendexLauncher.GoldendexHubStatusFrame
+GoldendexLauncher.Status.AnchorPoint = Vector2.new(0.5, 0.5)
+GoldendexLauncher.Status.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.Status.BackgroundTransparency = 1.000
+GoldendexLauncher.Status.Position = UDim2.new(0.5, 0, 0.5, 12)
+GoldendexLauncher.Status.Size = UDim2.new(0, 50, 0, 30)
+
+GoldendexLauncher.Status.Font = Enum.Font.SourceSans
+GoldendexLauncher.Status.Text = "Online"
+GoldendexLauncher.Status.TextColor3 = Color3.fromRGB(45, 192, 179)
+GoldendexLauncher.Status.TextSize = 20.000
+
+GoldendexLauncher.StatusName.Name = "StatusName"
+GoldendexLauncher.StatusName.Parent = GoldendexLauncher.GoldendexHubStatusFrame
+GoldendexLauncher.StatusName.AnchorPoint = Vector2.new(0.5, 0.5)
+GoldendexLauncher.StatusName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.StatusName.BackgroundTransparency = 1.000
+GoldendexLauncher.StatusName.Position = UDim2.new(0.5, 0, 0.5, -12)
+GoldendexLauncher.StatusName.Size = UDim2.new(0, 50, 0, 30)
+GoldendexLauncher.StatusName.Font = Enum.Font.SourceSans
+GoldendexLauncher.StatusName.Text = "Goldendex Hub"
+GoldendexLauncher.StatusName.TextColor3 = Color3.fromRGB(92, 106, 124)
+GoldendexLauncher.StatusName.TextSize = 14.000
+
+GoldendexLauncher.GoldendexAPIStatusFrame.Name = "GoldendexAPIStatusFrame"
+GoldendexLauncher.GoldendexAPIStatusFrame.Parent = GoldendexLauncher.ContentFrame
+GoldendexLauncher.GoldendexAPIStatusFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.GoldendexAPIStatusFrame.BackgroundTransparency = 1.000
+GoldendexLauncher.GoldendexAPIStatusFrame.LayoutOrder = 3
+GoldendexLauncher.GoldendexAPIStatusFrame.Position = UDim2.new(0, 80, 0, 38)
+GoldendexLauncher.GoldendexAPIStatusFrame.Size = UDim2.new(0, 60, 0, 60)
+
+GoldendexLauncher.Status_2.Name = "Status"
+GoldendexLauncher.Status_2.Parent = GoldendexLauncher.GoldendexAPIStatusFrame
+GoldendexLauncher.Status_2.AnchorPoint = Vector2.new(0.5, 0.5)
+GoldendexLauncher.Status_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.Status_2.BackgroundTransparency = 1.000
+GoldendexLauncher.Status_2.Position = UDim2.new(0.5, 0, 0.5, 12)
+GoldendexLauncher.Status_2.Size = UDim2.new(0, 50, 0, 30)
+GoldendexLauncher.Status_2.Font = Enum.Font.SourceSans
+GoldendexLauncher.Status_2.Text = "Online"
+GoldendexLauncher.Status_2.TextColor3 = Color3.fromRGB(45, 192, 179)
+GoldendexLauncher.Status_2.TextSize = 20.000
+
+GoldendexLauncher.StatusName_2.Name = "StatusName"
+GoldendexLauncher.StatusName_2.Parent = GoldendexLauncher.GoldendexAPIStatusFrame
+GoldendexLauncher.StatusName_2.AnchorPoint = Vector2.new(0.5, 0.5)
+
+GoldendexLauncher.StatusName_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.StatusName_2.BackgroundTransparency = 1.000
+GoldendexLauncher.StatusName_2.Position = UDim2.new(0.5, 0, 0.5, -12)
+GoldendexLauncher.StatusName_2.Size = UDim2.new(0, 50, 0, 30)
+GoldendexLauncher.StatusName_2.Font = Enum.Font.SourceSans
+GoldendexLauncher.StatusName_2.Text = "Goldendex API"
+GoldendexLauncher.StatusName_2.TextColor3 = Color3.fromRGB(92, 106, 124)
+GoldendexLauncher.StatusName_2.TextSize = 14.000
+
+GoldendexLauncher.GoldendexLauncherStatusFrame.Name = "GoldendexLauncherStatusFrame"
+GoldendexLauncher.GoldendexLauncherStatusFrame.Parent = GoldendexLauncher.ContentFrame
+GoldendexLauncher.GoldendexLauncherStatusFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.GoldendexLauncherStatusFrame.BackgroundTransparency = 1.000
+GoldendexLauncher.GoldendexLauncherStatusFrame.LayoutOrder = 1
+GoldendexLauncher.GoldendexLauncherStatusFrame.Position = UDim2.new(0, 150, 0, 38)
+GoldendexLauncher.GoldendexLauncherStatusFrame.Size = UDim2.new(0, 60, 0, 60)
+
+GoldendexLauncher.Status_3.Name = "Status"
+GoldendexLauncher.Status_3.Parent = GoldendexLauncher.GoldendexLauncherStatusFrame
+GoldendexLauncher.Status_3.AnchorPoint = Vector2.new(0.5, 0.5)
+GoldendexLauncher.Status_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.Status_3.BackgroundTransparency = 1.000
+GoldendexLauncher.Status_3.Position = UDim2.new(0.5, 0, 0.5, 12)
+GoldendexLauncher.Status_3.Size = UDim2.new(0, 50, 0, 30)
+GoldendexLauncher.Status_3.Font = Enum.Font.SourceSans
+GoldendexLauncher.Status_3.Text = "Online"
+GoldendexLauncher.Status_3.TextColor3 = Color3.fromRGB(45, 192, 179)
+GoldendexLauncher.Status_3.TextSize = 20.000
+
+GoldendexLauncher.StatusName_3.Name = "StatusName"
+GoldendexLauncher.StatusName_3.Parent = GoldendexLauncher.GoldendexLauncherStatusFrame
+GoldendexLauncher.StatusName_3.AnchorPoint = Vector2.new(0.5, 0.5)
+GoldendexLauncher.StatusName_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.StatusName_3.BackgroundTransparency = 1.000
+GoldendexLauncher.StatusName_3.Position = UDim2.new(0.5, 0, 0.5, -12)
+GoldendexLauncher.StatusName_3.Size = UDim2.new(0, 50, 0, 30)
+GoldendexLauncher.StatusName_3.Font = Enum.Font.SourceSans
+GoldendexLauncher.StatusName_3.Text = "Goldendex Launcher"
+GoldendexLauncher.StatusName_3.TextColor3 = Color3.fromRGB(92, 106, 124)
+GoldendexLauncher.StatusName_3.TextSize = 14.000
+
+GoldendexLauncher.UIListLayout.Parent = GoldendexLauncher.ContentFrame
+GoldendexLauncher.UIListLayout.FillDirection = Enum.FillDirection.Horizontal
+GoldendexLauncher.UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+GoldendexLauncher.UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+GoldendexLauncher.UIListLayout.Padding = UDim.new(0, 25)
+
+GoldendexLauncher.UICorner_3.CornerRadius = UDim.new(0, 4)
+GoldendexLauncher.UICorner_3.Parent = GoldendexLauncher.Frame
+
+GoldendexLauncher.UIListLayout_2.Parent = GoldendexLauncher.Frame
+GoldendexLauncher.UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
+GoldendexLauncher.UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+GoldendexLauncher.UIListLayout_2.Padding = UDim.new(0, 5)
+
+GoldendexLauncher.UIPadding.Parent = GoldendexLauncher.Frame
+GoldendexLauncher.UIPadding.PaddingBottom = UDim.new(0, 10)
+GoldendexLauncher.UIPadding.PaddingTop = UDim.new(0, 10)
+
+GoldendexLauncher.NewsSection.Name = "NewsSection"
+GoldendexLauncher.NewsSection.Parent = GoldendexLauncher.Frame
+GoldendexLauncher.NewsSection.AnchorPoint = Vector2.new(0.5, 0)
+GoldendexLauncher.NewsSection.BackgroundColor3 = Color3.fromRGB(35, 47, 62)
+GoldendexLauncher.NewsSection.BorderSizePixel = 0
+GoldendexLauncher.NewsSection.Size = UDim2.new(1, -20, 0, 150)
+
+GoldendexLauncher.SectionTopBar_2.Name = "SectionTopBar"
+GoldendexLauncher.SectionTopBar_2.Parent = GoldendexLauncher.NewsSection
+
+GoldendexLauncher.Frame_4.Parent = GoldendexLauncher.SectionTopBar_2
+GoldendexLauncher.Frame_4.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
+GoldendexLauncher.Frame_4.Size = UDim2.new(0, 2, 0, 32)
+
+GoldendexLauncher.UICorner_4.Parent = GoldendexLauncher.Frame_4
+
+GoldendexLauncher.Frame_5.Parent = GoldendexLauncher.SectionTopBar_2
+GoldendexLauncher.Frame_5.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
+GoldendexLauncher.Frame_5.BackgroundTransparency = 0.750
+GoldendexLauncher.Frame_5.BorderSizePixel = 0
+GoldendexLauncher.Frame_5.Position = UDim2.new(0, 0, 0, 32)
+GoldendexLauncher.Frame_5.Size = UDim2.new(1, 0, 0, 1)
+
+GoldendexLauncher.TextLabel_2.Parent = GoldendexLauncher.SectionTopBar_2
+GoldendexLauncher.TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.TextLabel_2.BackgroundTransparency = 1.000
+GoldendexLauncher.TextLabel_2.Position = UDim2.new(0, 12, 0, 4)
+GoldendexLauncher.TextLabel_2.Size = UDim2.new(0, 299, 0, 24)
+GoldendexLauncher.TextLabel_2.Font = Enum.Font.SourceSans
+GoldendexLauncher.TextLabel_2.Text = "News"
+GoldendexLauncher.TextLabel_2.TextColor3 = Color3.fromRGB(211, 216, 226)
+GoldendexLauncher.TextLabel_2.TextSize = 14.000
+GoldendexLauncher.TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+GoldendexLauncher.UICorner_5.CornerRadius = UDim.new(0, 4)
+GoldendexLauncher.UICorner_5.Parent = GoldendexLauncher.NewsSection
+
+GoldendexLauncher.UICorner_5.Parent = GoldendexLauncher.NewsSection
+
+GoldendexLauncher.ContentFrame_2.Name = "ContentFrame"
+GoldendexLauncher.ContentFrame_2.Parent = GoldendexLauncher.NewsSection
+GoldendexLauncher.ContentFrame_2.Active = true
+GoldendexLauncher.ContentFrame_2.AnchorPoint = Vector2.new(0.5, 1)
+GoldendexLauncher.ContentFrame_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.ContentFrame_2.BackgroundTransparency = 1.000
+GoldendexLauncher.ContentFrame_2.BorderSizePixel = 0
+GoldendexLauncher.ContentFrame_2.Position = UDim2.new(0.5, 0, 1, -8)
+GoldendexLauncher.ContentFrame_2.Size = UDim2.new(1, -20, 0, 100)
+GoldendexLauncher.ContentFrame_2.CanvasSize = UDim2.new(0, 0, 0, 0)
+GoldendexLauncher.ContentFrame_2.ScrollBarThickness = 4
+
+GoldendexLauncher.UIListLayout_3.Parent = GoldendexLauncher.ContentFrame_2
+GoldendexLauncher.UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+GoldendexLauncher.UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+GoldendexLauncher.UIListLayout_3.Padding = UDim.new(0, 5)
+
+GoldendexLauncher.LaunchSection.Name = "LaunchSection"
+GoldendexLauncher.LaunchSection.Parent = EzLauncher.Frame
+GoldendexLauncher.LaunchSection.AnchorPoint = Vector2.new(0.5, 0)
+GoldendexLauncher.LaunchSection.BackgroundColor3 = Color3.fromRGB(35, 47, 62)
+GoldendexLauncher.LaunchSection.BorderSizePixel = 0
+GoldendexLauncher.LaunchSection.Size = UDim2.new(1, -20, 0, 120)
+
+GoldendexLauncher.SectionTopBar_3.Name = "SectionTopBar"
+GoldendexLauncher.SectionTopBar_3.Parent = EzLauncher.LaunchSection
+
+GoldendexLauncher.Frame_6.Parent = EzLauncher.SectionTopBar_3
+GoldendexLauncher.Frame_6.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
+GoldendexLauncher.Frame_6.Size = UDim2.new(0, 2, 0, 32)
+
+GoldendexLauncher.UICorner_6.Parent = EzLauncher.Frame_6
+
+GoldendexLauncher.Frame_7.Parent = EzLauncher.SectionTopBar_3
+GoldendexLauncher.Frame_7.BackgroundColor3 = Color3.fromRGB(112, 112, 112)
+GoldendexLauncher.Frame_7.BackgroundTransparency = 0.750
+GoldendexLauncher.Frame_7.BorderSizePixel = 0
+GoldendexLauncher.Frame_7.Position = UDim2.new(0, 0, 0, 32)
+GoldendexLauncher.Frame_7.Size = UDim2.new(1, 0, 0, 1)
+
+GoldendexLauncher.TextLabel_3.Parent = EzLauncher.SectionTopBar_3
+GoldendexLauncher.TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.TextLabel_3.BackgroundTransparency = 1.000
+GoldendexLauncher.TextLabel_3.Position = UDim2.new(0, 12, 0, 4)
+GoldendexLauncher.TextLabel_3.Size = UDim2.new(0, 299, 0, 24)
+GoldendexLauncher.TextLabel_3.Font = Enum.Font.SourceSans
+GoldendexLauncher.TextLabel_3.Text = "Launcher / Other"
+GoldendexLauncher.TextLabel_3.TextColor3 = Color3.fromRGB(211, 216, 226)
+GoldendexLauncher.TextLabel_3.TextSize = 14.000
+GoldendexLauncher.TextLabel_3.TextXAlignment = Enum.TextXAlignment.Left
+
+GoldendexLauncher.UICorner_7.CornerRadius = UDim.new(0, 4)
+GoldendexLauncher.UICorner_7.Parent = EzLauncher.LaunchSection
+
+GoldendexLauncher.ContentFrame_3.Name = "ContentFrame"
+GoldendexLauncher.ContentFrame_3.Parent = EzLauncher.LaunchSection
+GoldendexLauncher.ContentFrame_3.AnchorPoint = Vector2.new(0.5, 1)
+GoldendexLauncher.ContentFrame_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.ContentFrame_3.BackgroundTransparency = 1.000
+GoldendexLauncher.ContentFrame_3.BorderColor3 = Color3.fromRGB(27, 42, 53)
+GoldendexLauncher.ContentFrame_3.Position = UDim2.new(0.5, 0, 1, -8)
+GoldendexLauncher.ContentFrame_3.Size = UDim2.new(1, -20, 0, 70)
+
+GoldendexLauncher.ThemeSelectionFrame.Name = "ThemeSelectionFrame"
+GoldendexLauncher.ThemeSelectionFrame.Parent = EzLauncher.ContentFrame_3
+GoldendexLauncher.ThemeSelectionFrame.AnchorPoint = Vector2.new(0, 1)
+GoldendexLauncher.ThemeSelectionFrame.BackgroundColor3 = Color3.fromRGB(41, 84, 178)
+GoldendexLauncher.ThemeSelectionFrame.Position = UDim2.new(0, 0, 1, -4)
+GoldendexLauncher.ThemeSelectionFrame.Size = UDim2.new(0, 150, 0, 30)
+
+GoldendexLauncher.UICorner_8.CornerRadius = UDim.new(0, 4)
+GoldendexLauncher.UICorner_8.Parent = EzLauncher.ThemeSelectionFrame
+
+GoldendexLauncher.SelectionLeft.Name = "SelectionLeft"
+GoldendexLauncher.SelectionLeft.Parent = EzLauncher.ThemeSelectionFrame
+GoldendexLauncher.SelectionLeft.AnchorPoint = Vector2.new(0, 0.5)
+GoldendexLauncher.SelectionLeft.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.SelectionLeft.BackgroundTransparency = 1.000
+GoldendexLauncher.SelectionLeft.Position = UDim2.new(0, 5, 0.5, 0)
+GoldendexLauncher.SelectionLeft.Size = UDim2.new(0, 20, 0, 20)
+GoldendexLauncher.SelectionLeft.Font = Enum.Font.SourceSans
+GoldendexLauncher.SelectionLeft.Text = "<"
+GoldendexLauncher.SelectionLeft.TextColor3 = Color3.fromRGB(211, 216, 226)
+GoldendexLauncher.SelectionLeft.TextSize = 14.000
+
+GoldendexLauncher.SelectionRight.Name = "SelectionRight"
+GoldendexLauncher.SelectionRight.Parent = EzLauncher.ThemeSelectionFrame
+GoldendexLauncher.SelectionRight.AnchorPoint = Vector2.new(1, 0.5)
+GoldendexLauncher.SelectionRight.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.SelectionRight.BackgroundTransparency = 1.000
+GoldendexLauncher.SelectionRight.Position = UDim2.new(1, -5, 0.5, 0)
+GoldendexLauncher.SelectionRight.Size = UDim2.new(0, 20, 0, 20)
+GoldendexLauncher.SelectionRight.Font = Enum.Font.SourceSans
+GoldendexLauncher.SelectionRight.Text = ">"
+GoldendexLauncher.SelectionRight.TextColor3 = Color3.fromRGB(211, 216, 226)
+GoldendexLauncher.SelectionRight.TextSize = 14.000
+
+GoldendexLauncher.SelectedLabel.Name = "SelectedLabel"
+GoldendexLauncher.SelectedLabel.Parent = EzLauncher.ThemeSelectionFrame
+GoldendexLauncher.SelectedLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+GoldendexLauncher.SelectedLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GoldendexLauncher.SelectedLabel.BackgroundTransparency = 1.000
+GoldendexLauncher.SelectedLabel.Position = UDim2.new(0.5, 0, 0.5, 0)
+GoldendexLauncher.SelectedLabel.Size = UDim2.new(1, -54, 1, -2)
+GoldendexLauncher.SelectedLabel.Font = Enum.Font.SourceSans
+GoldendexLauncher.SelectedLabel.Text = "Default Theme"
+GoldendexLauncher.SelectedLabel.TextColor3 = Color3.fromRGB(211, 216, 226)
+GoldendexLauncher.SelectedLabel.TextSize = 14.000
+
+GoldendexLauncher.Launch.Name = "Launch"
+GoldendexLauncher.Launch.Parent = EzLauncher.ContentFrame_3
+GoldendexLauncher.Launch.BackgroundColor3 = Color3.fromRGB(41, 84, 178)
+GoldendexLauncher.Launch.Size = UDim2.new(0, 150, 0, 30)
+GoldendexLauncher.Launch.Font = Enum.Font.SourceSans
+GoldendexLauncher.Launch.Text = "Launch"
+GoldendexLauncher.Launch.TextColor3 = Color3.fromRGB(211, 216, 226)
+GoldendexLauncher.Launch.TextSize = 14.000
+
+GoldendexLauncher.UICorner_9.CornerRadius = UDim.new(0, 4)
+GoldendexLauncher.UICorner_9.Parent = EzLauncher.Launch
+
+GoldendexLauncher.Containers.Name = "Containers"
+GoldendexLauncher.Containers.Parent = EzLauncher.EzLauncher
+
+GoldendexLauncher.NewsDivider.Name = "NewsDivider"
+GoldendexLauncher.NewsDivider.Parent = EzLauncher.Containers
+GoldendexLauncher.NewsDivider.BackgroundColor3 = Color3.fromRGB(18, 98, 159)
+GoldendexLauncher.NewsDivider.LayoutOrder = 1
+GoldendexLauncher.NewsDivider.Size = UDim2.new(1, -10, 0, 3)
+GoldendexLauncher.NewsDivider.Visible = false
+
+GoldendexLauncher.UICorner_10.Parent = EzLauncher.NewsDivider
+
+GoldendexLauncher.NewsLabel.Name = "NewsLabel"
+GoldendexLauncher.NewsLabel.Parent = EzLauncher.Containers
+GoldendexLauncher.NewsLabel.BackgroundColor3 = Color3.fromRGB(28, 41, 56)
+GoldendexLauncher.NewsLabel.BackgroundTransparency = 1.000
+GoldendexLauncher.NewsLabel.Size = UDim2.new(1, -8, 0, 30)
+GoldendexLauncher.NewsLabel.Visible = false
+GoldendexLauncher.NewsLabel.Font = Enum.Font.SourceSans
+GoldendexLauncher.NewsLabel.Text = ""
+GoldendexLauncher.NewsLabel.TextColor3 = Color3.fromRGB(211, 216, 226)
+GoldendexLauncher.NewsLabel.TextSize = 14.000
+GoldendexLauncher.NewsLabel.TextWrapped = true
+GoldendexLauncher.NewsLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+GoldendexLauncher.UIPadding_2.Parent = EzLauncher.NewsLabel
+GoldendexLauncher.UIPadding_2.PaddingBottom = UDim.new(0, 5)
+GoldendexLauncher.UIPadding_2.PaddingLeft = UDim.new(0, 5)
+GoldendexLauncher.UIPadding_2.PaddingRight = UDim.new(0, 5)
+GoldendexLauncher.UIPadding_2.PaddingTop = UDim.new(0, 5)
+
+--------------------------------------------------------------------
+-- Gui to lua manual properties
+
+GoldendexLauncher.Containers.NewsLabel.AutomaticSize = Enum.AutomaticSize.Y;
+GoldendexLauncher.NewsSection.ContentFrame.AutomaticCanvasSize = Enum.AutomaticSize.Y;
+GoldendexLauncher.NewsSection.ContentFrame.ScrollBarImageColor3 = Color3.fromRGB(112, 112, 112);
+
+--------------------------------------------------------------------
+-- Get launcher data
+
+GoldendexLauncher.GoldendexLauncher.Enabled = false;
+
+local launcherData = game:GetService("HttpService"):JSONDecode(
+	(game:HttpGet("https://raw.githubusercontent.com/TPR002/Goldendex-Hub-TPR-V.012.2911-GDF-1/refs/heads/main/Goldendex%20Hub%20Admin2.txt")));
+
+GoldendexLauncher.GoldendexLauncher.Enabled = true;
+
+--------------------------------------------------------------------
+-- Startup animation
+
+-- Essentially changes the visibillity of the descendants of the main frame of the launcher
+local function changeElementState(state)
+	for i,v in pairs(GoldendexLauncher.GoldendexLauncher.Frame:GetDescendants()) do
+		if v:IsA("GuiObject") then
+			v.Visible = state;
+		end
+	end
+end
+
+changeElementState(false);
+
+local oldSize = GoldendexLauncher.GoldendexLauncher.Frame.Size;
+GoldendexLauncher.GoldendexLauncher.Frame.Size = UDim2.new(0,0,0,0);
+
+GoldendexLauncher.GoldendexLauncher.Frame:TweenSize(oldSize, Enum.EasingDirection.Out,
+	Enum.EasingStyle.Quad, 0.3);
+
+wait(0.35);
+
+changeElementState(true);
+
+--------------------------------------------------------------------
+-- Get all the launcher data necessary
+
+local newsData = launcherData["NewsData"];
+local statusData = launcherData["StatusData"];
+local latestVersion = launcherData["LatestVersion"];
+local themes = launcherData["Themes"];
+
+--------------------------------------------------------------------
+-- Apply the launcher data: News
+
+for i,v in pairs(newsData) do
+
+	local newsOrder = v[1] * -1;	-- This is to make it sort in a different order
+	local newsText = v[2];
+
+	if newsText == "@Goldendex-HUB-lua" then
+		local div = GoldendexLauncher.NewsDivider:Clone();
+		div.LayoutOrder = newsOrder;
+		div.Parent = GoldendexLauncher.NewsSection.ContentFrame;
+		div.Visible = true;
+	else
+		local container = GoldendexLauncher.NewsLabel:Clone();
+		container.Text = newsText;
+		container.LayoutOrder = newsOrder;
+		container.Parent = GoldendexLauncher.NewsSection.ContentFrame;
+		container.Visible = true;
+	end
+
+end
+
+--------------------------------------------------------------------
+-- Apply the launcher data: Status
+
+GoldendexLauncher.GoldendexHubStatusFrame.Status.Text = statusData["GoldendexHub"];
+GoldendexLauncher.GoldendexAPIStatusFrame.Status.Text = statusData["GoldendexAPI"];
+GoldendexLauncher.GoldendexLauncherStatusFrame.Status.Text = statusData["GoldendexLauncher"];
+
+if GoldendexLauncher.GoldendexHubStatusFrame.Status.Text == "Offline" then
+	GoldendexLauncher.GoldendexHubStatusFrame.Status.TextColor3 = Color3.fromRGB(192, 49, 52)
+end
+if GoldendexLauncher.GoldendexAPIStatusFrame.Status.Text == "Offline" then
+	GoldendexLauncher.GoldendexAPIStatusFrame.Status.TextColor3 = Color3.fromRGB(192, 49, 52)
+end
+if GoldendexLauncher.GoldendexLauncherStatusFrame.Status.Text == "Offline" then
+	GoldendexLauncher.GoldendexLauncherStatusFrame.Status.TextColor3 = Color3.fromRGB(192, 49, 52)
+end
+
+--------------------------------------------------------------------
+-- Apply the launcher data: Themes
+
+local selectedTheme = "Default";
+local currentThemeIndex = themes[selectedTheme]["ThemeIndex"];
+local highestThemeIndex = (function()
+	local highest = 0;
+	for i,v in pairs(themes) do
+		if v["ThemeIndex"] > highest then highest = v["ThemeIndex"]; end
+	end
+	return highest;
+end)();
+
+local function getThemeWithThemeIndex(themeIndex)
+	for i,v in pairs(themes) do
+		if v["ThemeIndex"] == themeIndex then return i; end
+	end
+end
+
+local function updateSelectedTheme()
+	selectedTheme = getThemeWithThemeIndex(currentThemeIndex);
+	GoldendexLauncher.SelectedLabel.Text = selectedTheme;
+end
+
+GoldendexLauncher.SelectionRight.MouseButton1Click:Connect(function()
+	if currentThemeIndex == highestThemeIndex then
+		currentThemeIndex = 1;
+	else
+		currentThemeIndex = currentThemeIndex + 1;
+	end
+	updateSelectedTheme();
+end)
+
+GoldendexLauncher.SelectionLeft.MouseButton1Click:Connect(function()
+	if currentThemeIndex == 1 then
+		currentThemeIndex = highestThemeIndex;
+	else
+		currentThemeIndex = currentThemeIndex - 1;
+	end
+	updateSelectedTheme();
+end)
+
+--------------------------------------------------------------------
+-- Apply the launcher data: latest version
+
+-- List of accouonts that can launch Goldendex Hub regardless of the status
+-- Note that the status is just to prevent users from executing Goldendex Hub when it is in testing/broken stages
+-- Therefore there is no need for any type of secure whitelist
+local allowedOverrideUsers = {
+	2626915991,
+	1274116266,
+	2626881906,
+	2626911435,
+	1608045548,
+	1593772727,
+	2821690140,
+	269429714,
+	1772649133,
+	1818847308,
+	382498,
+	1606794809
+}
+
+GoldendexLauncher.Launch.MouseButton1Click:Connect(function()
+	
+	-- Check if services are down
+	if not table.find(allowedOverrideUsers, game.Players.LocalPlayer.UserId) and (GoldendexLauncher.GoldendexHubStatusFrame.Status.Text == "Offline" or
+	GoldendexLauncher.GoldendexAPIStatusFrame.Status.Text == "Offline" or
+	GoldendexLauncher.GoldendexLauncherStatusFrame.Status.Text == "Offline") then
+		spawn(function()
+			GoldendexLauncher.Launch.Text = "Service Offline";
+			wait(3);
+			GoldendexLauncher.Launch.Text = "Launch";
+		end)
+		return;
+	end
+
+	GoldendexLauncher.Launch.Text = "Launching...";
+
+	-- Apply the theme before launching Goldendex Hub
+	_G.EzHubTheme = themes[selectedTheme];
+	loadstring(game:HttpGet(latestVersion))();
+
+	changeElementState(false)
+
+	GoldendexLauncher.GoldendexLauncher.Frame:TweenSize(UDim2.new(0,0,0,0), Enum.EasingDirection.Out,
+		Enum.EasingStyle.Quad, 0.5, false, function()
+			GoldendexLauncher.GoldendexLauncher:Destroy();
+		end);
+
+end)
+
+--------------------------------------------------------------------
+-- Dragify
+
+local function dragify(MainFrame)
+
+	local dragging;
+	local dragInput;
+	local dragStart;
+	local startPos;
+
+	local function update(input)
+		local Delta = input.Position - dragStart;
+		local Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + Delta.X, startPos.Y.Scale, startPos.Y.Offset + Delta.Y);
+		game:GetService("TweenService"):Create(MainFrame, TweenInfo.new(.15), {Position = Position}):Play();
+	end
+
+	MainFrame.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true;
+			dragStart = input.Position;
+			startPos = MainFrame.Position;
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false;
+				end
+			end)
+		end
+	end)
+
+	MainFrame.InputChanged:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch) then
+			dragInput = input;
+		end
+	end)
+
+	game:GetService("UserInputService").InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input);
+		end
+	end)
+end
+
+dragify(GoldendexLauncher.GoldendexLauncher.Frame);
